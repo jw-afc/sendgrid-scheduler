@@ -36,9 +36,6 @@ namespace SendGridScheduler
 			Task.Factory.StartNew(SendEmail);
 		}
 
-		/// <summary>
-		/// Setup/send timed messages e.g. all daily/weekly messages inc. collated targets grouped by start-time for delayed send.  Subsequently checks whether it is time to send any of the timed messages
-		/// </summary>
 		private async void SendEmail()
 		{
 			var apiKey = Environment.GetEnvironmentVariable("SENDGRID_APIKEY");
